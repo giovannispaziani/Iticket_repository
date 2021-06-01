@@ -1,17 +1,38 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Ciao
+      ITicket
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="ciao">
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Tab 1</ion-title>
     </ion-toolbar>
   </ion-header>
+  
+ <ion-card class="profilo">
+    <ion-item lines="none">
+    <ion-icon name="person" class="person" slot="start"></ion-icon>
+    <ion-button class="button" expand="block"> <p class="style"> Profilo Utente </p> </ion-button>
+    </ion-item>
+  </ion-card>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-card class="profilo2">
+    <ion-item lines="none">
+    <ion-icon name="calendar" class="person" slot="start"></ion-icon>
+    <ion-button class="button" expand="block"> <p class="style"> Calendario Eventi </p> </ion-button>
+    </ion-item>
+  </ion-card>
+
+  <ion-card class="profilo2">
+    <ion-item lines="none">
+    <ion-icon name="newspaper" class="person" slot="start"></ion-icon>
+    <ion-button class="button" expand="block"> <p class="style"> Lista Notizie </p> </ion-button>
+    </ion-item>
+  </ion-card>
+
+
 </ion-content>
