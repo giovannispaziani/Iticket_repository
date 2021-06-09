@@ -4,14 +4,19 @@
   margin-right: auto;
   margin-top: auto;
   margin-bottom: auto;
-  height : 90%;
+  height : 95%;
 }
 
 .logoCard {
-    height : 25%;
+    height : 12%;
 }
 
-.logoItem {
-    display : block;
-    height : 100%;
+.titolo {
+    position : absolute;
+    left : 0px;
+    top : 25%;
+}
+
+.inputLogin {
+    height : 20%;
 }
