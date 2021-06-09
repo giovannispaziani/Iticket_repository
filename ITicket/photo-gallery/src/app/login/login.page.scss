@@ -1,22 +1,40 @@
-.logo {
-    position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: auto;
-  margin-bottom: auto;
-  height : 95%;
-}
-
-.logoCard {
-    height : 12%;
-}
-
 .titolo {
     position : absolute;
     left : 0px;
     top : 25%;
 }
 
-.inputLogin {
-    height : 20%;
+.paginaLogin {
+    --ion-background-color: #121212;
 }
+
+/*.logoCard{
+    height : 20%;
+    padding-top : 20%;
+}*/
+
+.logo {
+ height : 40%;
+ margin-top : 24%;
+}
+
+.inputLoginCard {
+    position : relative;
+    top : 2%;
+    --ion-background-color : #FFFFFF;
+    
+    }
+
+.inputLoginCard2 {
+    position : relative;
+    --ion-background-color : #FFFFFF;
+    margin-top : 8%;
+}
+
+.button{
+    margin-top : 15%;
+    margin-left : 25%;
+    width: 50%;
+    color: white;
+    font-weight: bold;
+  }

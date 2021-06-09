@@ -29,14 +29,18 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-card class="logoCard">
-      <ion-img class="logo" src="../../assets/images/logo.png"></ion-img>
-  </ion-card>
+<ion-content class="paginaLogin">
+  <ion-item>
+    <ion-img class="logo" src="../../assets/images/bb.svg"></ion-img>
+  </ion-item>
+  
   <ion-card class="inputLoginCard">
+    <ion-input placeholder="Email" type="email"></ion-input>
   </ion-card>
-  <ion-card class="inputLoginCard">
+  <ion-card class="inputLoginCard2">
+    <ion-input placeholder="Password" type="password"></ion-input>
   </ion-card>
+  <ion-button [routerLink]="['/login']" class="button" expand="block"> Login </ion-button>
 </ion-content>
 
 <!--  LORO CODICE : -->
