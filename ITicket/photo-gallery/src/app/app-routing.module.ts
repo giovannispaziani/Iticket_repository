@@ -54,6 +54,10 @@ const routes: Routes = [
     path: 'cambio-nominativo-biglietto',
     loadChildren: () => import('./cambio-nominativo-biglietto/cambio-nominativo-biglietto.module').then( m => m.CambioNominativoBigliettoPageModule)
   },
+  {
+    path: 'calendario-eventi',
+    loadChildren: () => import('./calendario-eventi/calendario-eventi.module').then( m => m.CalendarioEventiPageModule)
+  },
 ];
 @NgModule({
   imports: [
