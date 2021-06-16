@@ -1,9 +1,22 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>carrello</ion-title>
+    <ion-title>Carrello</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Carrello</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card class="profilo">
+    <ion-item lines="none">
+    <ion-icon name="person" class="person" slot="start"></ion-icon>
+    <ion-button [routerLink]="['/login']" class="button" expand="block"> <p class="style"> In carrello </p> </ion-button>
+    </ion-item>
+  </ion-card>
 
 </ion-content>
