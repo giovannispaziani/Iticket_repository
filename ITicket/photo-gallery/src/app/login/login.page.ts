@@ -25,6 +25,7 @@ export class LoginPage implements OnInit {
   }
 
   ngOnInit() {
+    console.log("OnInit");
     this.loginFormModel = this.formBuilder.group({
       username: ['amleto', Validators.compose([
         Validators.required
@@ -61,13 +62,13 @@ export class LoginPage implements OnInit {
   }
 
 
- /* private initTranslate() {
+  /*private initTranslate() {
     this.translateService.get('LOGIN_ERROR_SUB_TITLE').subscribe((data) => {
       this.loginSubTitle = data;
     });
     this.translateService.get('LOGIN_ERROR_TITLE').subscribe((data) => {
       this.loginTitle = data;
     });
-  } */
+  }*/
 
 }

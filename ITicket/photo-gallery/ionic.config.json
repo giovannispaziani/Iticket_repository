@@ -1,7 +1,7 @@
 {
-  "name": "photo-gallery",
+  "name": "ITicket",
   "integrations": {
-    "capacitor": {}
+    "cordova": {}
   },
   "type": "angular"
 }

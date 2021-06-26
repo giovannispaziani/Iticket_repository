@@ -29,7 +29,7 @@ import {IonicStorageModule} from '@ionic/storage';
           }
       }), */
       IonicStorageModule.forRoot({
-          name: 'ITicket',
+          name: 'iticket',
           driverOrder: ['indexeddb', 'sqlite', 'websql']
       }),
       AppRoutingModule],

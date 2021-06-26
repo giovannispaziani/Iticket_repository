@@ -37,6 +37,11 @@ export class UtenteService {
     }
 
     login(account: Account): Observable<Utente> {
+        console.log("chiamata ad UtenteService");
+        this.http.get("http://localhost:8080/iticket").pipe(map((res: Response) =>{
+            var data = res.json();
+            console.log(data);
+            }));
         return this.http.post<Utente>(URL.LOGIN, account, {observe: 'response'}).pipe(
             map((resp: HttpResponse<Utente>) => {
                 const token = resp.headers.get(X_AUTH);
@@ -48,6 +53,7 @@ export class UtenteService {
                 // update dell'observable dell'utente
                 this.utente$.next(resp.body);
                 this.loggedIn$.next(true);
+                console.log("Metodo risolto");
                 return resp.body;
             }));
     }

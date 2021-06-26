@@ -1,20 +1,37 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {ReactiveFormsModule} from '@angular/forms';
+import {RouterModule, Routes} from '@angular/router';
 
-import { IonicModule } from '@ionic/angular';
+import {IonicModule} from '@ionic/angular';
 
-import { ProfiloUtentePageRoutingModule } from './profilo-utente-routing.module';
+import {ProfiloPage} from './profilo-utente.page';
+import {HttpClient} from '@angular/common/http';
+//import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+//import {createTranslateLoader} from '../../app.module';
 
-import { ProfiloUtentePage } from './profilo-utente.page';
+const routes: Routes = [
+    {
+        path: '',
+        component: ProfiloPage
+    }
+];
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    ProfiloUtentePageRoutingModule
-  ],
-  declarations: [ProfiloUtentePage]
+    imports: [
+        CommonModule,
+        ReactiveFormsModule,
+        IonicModule,
+        /*TranslateModule.forChild({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: (createTranslateLoader),
+                deps: [HttpClient]
+            }
+        }),*/
+        RouterModule.forChild(routes)
+    ],
+    declarations: [ProfiloPage]
 })
-export class ProfiloUtentePageModule {}
+export class ProfiloPageModule {
+}

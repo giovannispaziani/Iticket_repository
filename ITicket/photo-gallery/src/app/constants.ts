@@ -1,6 +1,6 @@
 export const USE_PROXY = true;
 
-export const URL_BASE = USE_PROXY ? 'api' : 'http://localhost:8080/ITicket/api';
+export const URL_BASE = USE_PROXY ? 'api' : 'http://localhost:8080/iticket/api';
 
 export const URL = {
     LOGIN: URL_BASE + '/login',
@@ -8,7 +8,9 @@ export const URL = {
     UPDATE_PROFILO: URL_BASE + '/utente/updateprofilo',
     NOTIZIE: URL_BASE + '/notizie',
     INSEGNAMENTI: URL_BASE + '/insegnamenti',
-    APPELLI: URL_BASE + '/appelli'
+    APPELLI: URL_BASE + '/appelli',
+    REGISTRAZIONE: URL_BASE + '/regisrazione'
+
 };
 
 export const X_AUTH = 'X-Auth';
