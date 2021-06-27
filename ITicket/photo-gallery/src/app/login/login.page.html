@@ -79,14 +79,17 @@
     <ion-img class="logo" src="../../assets/images/bb.svg"></ion-img>
   </ion-item>
   
-  <ion-card class="inputLoginCard">
-    <ion-input placeholder="Email" type="email"></ion-input>
-  </ion-card>
-  <ion-card class="inputLoginCard2">
-    <ion-input placeholder="Password" type="password"></ion-input>
-  </ion-card>
-  <ion-button class="button" expand="block"> Login </ion-button>
-  <p class="link"> <a href ="/tabs/registrazione">  Crea il tuo account.  </a></p>
+ <!-- ion card messe dentro al FORM -->
+  <form [formGroup]="loginFormModel" class="list-form">    
+    <ion-card class="inputLoginCard">
+      <ion-input placeholder="Email" type="email" formControlName="username"></ion-input>
+    </ion-card>
+    <ion-card class="inputLoginCard2">
+      <ion-input placeholder="Password" type="password" formControlName="password"></ion-input>
+    </ion-card>
+    <ion-button class="button" expand="block" (click)="onLogin()" [disabled]="!loginFormModel.valid" tappable> Login </ion-button>
+    <p class="link"> <a href ="/tabs/registrazione">  Crea il tuo account.  </a></p>
+  </form>
 </ion-content>
 
 
