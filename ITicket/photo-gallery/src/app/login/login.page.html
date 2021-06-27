@@ -1,4 +1,4 @@
-<ion-header>
+ <!--<ion-header>
   <ion-toolbar>
     <ion-title color="light" text-center>{{ 'LOGIN_TITLE' }}</ion-title>
   </ion-toolbar>
@@ -9,12 +9,12 @@
   <div class="auth-content">
 
     <!-- Logo -->
-    <div padding-horizontal text-center class="animated fadeInDown">
+   <!--  <div padding-horizontal text-center class="animated fadeInDown">
       <div class="logo"></div>
     </div>
 
     <!-- Login form -->
-    <form [formGroup]="loginFormModel" class="list-form">
+   <!--  <form [formGroup]="loginFormModel" class="list-form">
       <ion-item no-padding class="animated fadeInUp">
         <ion-label position="floating">
           <ion-icon name="contact" item-start></ion-icon>{{ 'USERNAME' }}</ion-label>
@@ -39,4 +39,54 @@
       </div>
     </form>
   </div>
+</ion-content>  -->
+
+
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="titolo">
+      Login
+    </ion-title>
+    <ion-buttons slot="start">
+
+      <ion-button disabled="true">
+
+        <ion-icon name="add-outline" size="large" slot="icon-only" style="color: rgba(42, 56, 211, 0);"></ion-icon>
+
+        </ion-button> 
+
+      </ion-buttons>
+
+    
+
+      <ion-buttons slot="end">
+
+      <ion-button disabled="true">
+
+        <ion-icon name="add-outline" size="large" slot="icon-only" style="color: rgba(42, 56, 211, 0);"></ion-icon>
+
+      </ion-button>      <!-- Inutile, solo per centrare l'ion-title "Recensioni" -->
+
+      </ion-buttons>
+
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="paginaLogin">
+  <ion-item>
+    <ion-img class="logo" src="../../assets/images/bb.svg"></ion-img>
+  </ion-item>
+  
+  <ion-card class="inputLoginCard">
+    <ion-input placeholder="Email" type="email"></ion-input>
+  </ion-card>
+  <ion-card class="inputLoginCard2">
+    <ion-input placeholder="Password" type="password"></ion-input>
+  </ion-card>
+  <ion-button class="button" expand="block"> Login </ion-button>
+  <p class="link"> <a href ="/tabs/registrazione">  Crea il tuo account.  </a></p>
 </ion-content>
+
+
