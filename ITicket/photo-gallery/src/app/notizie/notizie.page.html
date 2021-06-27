@@ -1,4 +1,4 @@
-<ion-content padding>
+<!-- <ion-content padding>
   <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
       <ion-refresher-content
               pullingIcon="arrow-dropdown"
@@ -9,8 +9,11 @@
     <ion-item>Prova Item Notizia 1</ion-item>
     <ion-item>Prova Item Notizia 2</ion-item>
       <ion-item *ngFor="let notizia of notizie$ | async" [routerLink]="['/notizie', notizia.id]" routerDirection="forward" detail="true">
-          <ion-label>{{notizia.dataPubblicazione | date:'dd/MM/yyyy'}}</ion-label>
+        <ion-item>Notizia presa dal db</ion-item>
+        <ion-label>{{notizia.dataPubblicazione | date:'dd/MM/yyyy'}}</ion-label>
           <span>{{notizia.nome | slice:0:20}}</span>
       </ion-item>
   </ion-list>
-</ion-content>
+</ion-content> -->
+
+
