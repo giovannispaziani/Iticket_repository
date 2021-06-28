@@ -57,7 +57,7 @@ export class RegistrazionePage implements OnInit {
     this.utente.ruolo ="Spazzino";
     this.utente.username ="Gabriele";
     this.utenteService.registrazione(this.utente).subscribe((nuovoUtente: Utente) => {
-      this.navController.back();
+      this.navController.navigateRoot('tabs');
     });
   }
 
