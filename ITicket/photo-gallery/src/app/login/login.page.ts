@@ -27,10 +27,10 @@ export class LoginPage implements OnInit {
   ngOnInit() {
     console.log("OnInit");
     this.loginFormModel = this.formBuilder.group({
-      username: ['amleto', Validators.compose([
+      username: ['', Validators.compose([
         Validators.required
       ])],
-      password: ['amleto', Validators.compose([
+      password: ['', Validators.compose([
         Validators.required
       ])]
     });
@@ -49,6 +49,10 @@ export class LoginPage implements OnInit {
             this.showLoginError();
           }
         });
+  }
+
+  logout() {
+    this.utenteService.logout();
   }
 
   async showLoginError() {

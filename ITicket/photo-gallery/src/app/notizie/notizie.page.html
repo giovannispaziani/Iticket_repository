@@ -53,6 +53,7 @@
     <ion-img class="logo" src="../../assets/images/bb.svg"></ion-img>
   </ion-item>
   
+  <!-- notizie messe dentro ion list e dentro ion item *ngFor -->
   <ion-list>
   <ion-item *ngFor="let notizia of notizie$ | async" [routerLink]="['/notizie', notizia.id]" routerDirection="forward" detail="true">
     <ion-card class="ncard">

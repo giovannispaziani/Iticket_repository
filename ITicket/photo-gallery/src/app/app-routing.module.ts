@@ -24,7 +24,7 @@ const routes: Routes = [
   },
   {
     path: 'profilo-utente',
-    loadChildren: () => import('./profilo-utente/profilo-utente.module').then( m => m.ProfiloPageModule)
+    loadChildren: () => import('./profilo-utente/profilo-utente.module').then( m => m.ProfiloUtentePageModule)
   },
   {
     path: 'rivendita-biglietto',
@@ -62,6 +62,11 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
+  {
+    path: 'registrazione',
+    loadChildren: () => import('./registrazione/registrazione.module').then( m => m.RegistrazionePageModule)
+  },
+
 
 ];
 @NgModule({

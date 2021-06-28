@@ -5,7 +5,7 @@ import {RouterModule, Routes} from '@angular/router';
 
 import {IonicModule} from '@ionic/angular';
 
-import {ProfiloPage} from './profilo-utente.page';
+import {ProfiloUtentePage} from './profilo-utente.page';
 import {HttpClient} from '@angular/common/http';
 //import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 //import {createTranslateLoader} from '../../app.module';
@@ -13,7 +13,7 @@ import {HttpClient} from '@angular/common/http';
 const routes: Routes = [
     {
         path: '',
-        component: ProfiloPage
+        component: ProfiloUtentePage
     }
 ];
 
@@ -31,7 +31,7 @@ const routes: Routes = [
         }),*/
         RouterModule.forChild(routes)
     ],
-    declarations: [ProfiloPage]
+    declarations: [ProfiloUtentePage]
 })
-export class ProfiloPageModule {
+export class ProfiloUtentePageModule {
 }

@@ -24,12 +24,12 @@ const routes: Routes = [
         loadChildren: () => import('../login/login.module').then(m => m.LoginPageModule)
       },
       {
-
-    
-      
       path: 'notizie',
       loadChildren: () => import('../notizie/notizie.module').then(m => m.NotiziePageModule)
-      
+    },
+    {
+      path: 'registrazione',
+      loadChildren: () => import('../registrazione/registrazione.module').then(m => m.RegistrazionePageModule)
     },
 
       {

@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 //import {Lingua, LinguaService} from '../../services/lingua.service';
 import {UtenteService} from '../services/utente.service';
@@ -8,11 +8,11 @@ import {NavController} from '@ionic/angular';
 //import {TranslateService} from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-profilo',
-  templateUrl: './profilo-utente.page.html',
-  styleUrls: ['./profilo-utente.page.scss'],
+  selector: 'app-registrazione',
+  templateUrl: './registrazione.page.html',
+  styleUrls: ['./registrazione.page.scss'],
 })
-export class ProfiloUtentePage implements OnInit {
+export class RegistrazionePage implements OnInit {
 
   //private lingue: Lingua[];
   private profiloFormModel: FormGroup;
@@ -22,8 +22,7 @@ export class ProfiloUtentePage implements OnInit {
               //private translateService: TranslateService,
               //private linguaService: LinguaService,
               private utenteService: UtenteService,
-              private navController: NavController) {
-  }
+              private navController: NavController) { }
 
   ngOnInit() {
     //this.lingue = this.linguaService.getLingue();
@@ -51,12 +50,15 @@ export class ProfiloUtentePage implements OnInit {
     //this.linguaService.updateLingua(this.profiloFormModel.value.linguaPreferita);
     this.utente.email = this.profiloFormModel.value.email;
     this.utente.telefono = this.profiloFormModel.value.telefono;
-    this.utenteService.updateProfilo(this.utente).subscribe((nuovoUtente: Utente) => {
+    this.utente.cognome = "Giggio";
+    this.utente.matricola = "212131";
+    this.utente.nome = "Alfredo";
+    this.utente.password ="1234";
+    this.utente.ruolo ="Spazzino";
+    this.utente.username ="Gabriele";
+    this.utenteService.registrazione(this.utente).subscribe((nuovoUtente: Utente) => {
       this.navController.back();
     });
   }
 
-  cancel() {
-    this.navController.back();
-  }
 }
