@@ -9,8 +9,8 @@ export const URL = {
     NOTIZIE: URL_BASE + '/notizie',
     INSEGNAMENTI: URL_BASE + '/insegnamenti',
     APPELLI: URL_BASE + '/appelli',
-    REGISTRAZIONE: URL_BASE + '/utente/createprofilo'
-
+    REGISTRAZIONE: URL_BASE + '/utente/createprofilo',
+    CARRELLO: URL_BASE + '/carrello'
 };
 
 export const X_AUTH = 'X-Auth';

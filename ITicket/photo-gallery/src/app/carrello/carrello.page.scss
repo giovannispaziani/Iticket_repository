@@ -1,0 +1,77 @@
+.ciao{
+    --ion-background-color: #121212;
+}
+
+.biglietto{
+    
+    --ion-background-color: white;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    margin-top: 5%;
+    height: 35%;
+}
+
+.card{
+    --ion-background-color: #3880ff;
+    height: 40%;
+    width: 150%;
+    color: white;
+    margin-right: 20px;
+  }
+  
+.person{
+      color: #3880ff; 
+      font-size: 220%;
+  }
+
+.logo{
+    height : 75%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-right: 20%;
+    margin-left: 0%;
+}
+
+.trash{
+    font-size: 400%;
+}
+
+.procedi{
+    margin: auto;
+    height: 5%;
+    width: 30%;
+    margin-bottom: 5%;
+    color: white;
+}
+
+.titolo {
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-right: 5%;
+    margin-left: 5%;
+} 
+
+/*.carrello{
+    --ion-background-color: #3880ff;
+    height: 50%;
+    width: 130%;
+    color: white;
+    padding-right: 5%;
+    
+}*/
+
+.style{
+    font-size: 80%;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: absolute;
+    top: -12%;
+    left: 4%;
+}
+
+.style2{
+    font-size: 80%;
+    font-weight: bold;
+    text-transform: uppercase;
+}
