@@ -1,3 +1,22 @@
+<!-- <ion-content padding>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content
+              pullingIcon="arrow-dropdown"
+              refreshingSpinner="circles">
+      </ion-refresher-content>
+  </ion-refresher>
+  <ion-list>
+    <ion-item>Prova Item Notizia 1</ion-item>
+    <ion-item>Prova Item Notizia 2</ion-item>
+      <ion-item *ngFor="let notizia of notizie$ | async" [routerLink]="['/notizie', notizia.id]" routerDirection="forward" detail="true">
+        <ion-item>Notizia presa dal db</ion-item>
+        <ion-label>{{notizia.dataPubblicazione | date:'dd/MM/yyyy'}}</ion-label>
+          <span>{{notizia.nome | slice:0:20}}</span>
+      </ion-item>
+  </ion-list>
+</ion-content> -->
+
+
 <ion-header>
   <ion-toolbar>
     <ion-title class="titolo">
@@ -34,7 +53,21 @@
     <ion-img class="logo" src="../../assets/images/bb.svg"></ion-img>
   </ion-item>
   
-  <ion-card class="ncard">
+  <!-- notizie messe dentro ion list e dentro ion item *ngFor -->
+  <ion-list>
+  <ion-item *ngFor="let notizia of notizie$ | async" [routerLink]="['/notizie', notizia.id]" routerDirection="forward" detail="true">
+    <ion-card class="ncard">
+      <p class="titolo"> {{notizia.nome}}  </p>
+      <p class="data"> {{notizia.dataPubblicazione | date:'dd/MM/yyyy'}}  </p>
+      <p class="descrizione"> Giggino a lavoro nonci crede neanche lui. Giggino a lavoro nonci crede neanche lui.Giggino a lavoro nonci crede neanche lui.</p>
+    </ion-card>
+  </ion-item>
+</ion-list>
+</ion-content>
+
+
+
+  <!--<ion-card class="ncard">
     <p class="titolo"> FEDEZ - ROMA  </p>
     <p class="data"> 23-05-2021  </p>
     <p class="descrizione"> Giggino a lavoro nonci crede neanche lui. Giggino a lavoro nonci crede neanche lui.Giggino a lavoro nonci crede neanche lui.</p>
@@ -64,5 +97,5 @@
     <p class="descrizione"> Giggino a lavoro nonci crede neanche lui. Giggino a lavoro nonci crede neanche lui.Giggino a lavoro nonci crede neanche lui.</p>
   </ion-card>
 
-</ion-content>
+</ion-content> -->
 

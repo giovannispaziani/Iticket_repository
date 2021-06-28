@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Notizia} from '../model/notizia.model';
+import {NotiziaService} from '../services/notizia.service';
+import {Observable} from 'rxjs';
+import {tap} from 'rxjs/internal/operators/tap';
+import {NavController} from '@ionic/angular';
 
 @Component({
   selector: 'app-notizie',
@@ -6,10 +11,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./notizie.page.scss'],
 })
 export class NotiziePage implements OnInit {
+  private notizie$: Observable<Notizia[]>;
 
-  constructor() { }
+  constructor(private notiziaService: NotiziaService) {
+  }
 
   ngOnInit() {
+    this.notizie$ = this.notiziaService.list();
+  }
+
+  doRefresh(event) {
+    this.notizie$ = this.notiziaService.list()
+        .pipe(tap(() => {
+          event.target.complete();
+        }));
   }
 
 }
