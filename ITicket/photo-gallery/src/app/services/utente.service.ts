@@ -94,7 +94,7 @@ export class UtenteService {
     }
 
     registrazione(nuovoUtente: Utente) {
-        return this.http.post<Utente>(URL.REGISTRAZIONE, {observe: 'response'})/*.pipe(
+        return this.http.post<Utente>(URL.REGISTRAZIONE, nuovoUtente, {observe: 'response'})/*.pipe(
            map((resp: HttpResponse<Utente>) => {
                 // Aggiornamento dell'utente nello storage.
                 // Utente memorizzato nello storage per evitare chiamata REST quando si vuole modificare il profilo
