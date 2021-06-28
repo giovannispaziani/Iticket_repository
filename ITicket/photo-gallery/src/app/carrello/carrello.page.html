@@ -1,9 +1,44 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>carrello</ion-title>
+    <ion-title>Carrello</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true" class="ciao">
+
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Carrello</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card class="biglietto">
+    <p class="titolo"> FEDEZ - ROMA 21-05-2021 STADIO OLIMPICO </p>
+    <ion-item lines="none">
+      <ion-img class="logo" src="../../assets/images/ticket.svg"></ion-img>
+      <ion-card class="card" expand="block"> <p class="style"> Nel carrello </p> </ion-card>
+      <ion-icon name="trash" class="trash"></ion-icon>
+    </ion-item>
+  </ion-card>
+
+  <ion-card class="biglietto">
+    <p class="titolo"> J AX - MILANO 21-05-2021 STADIO SAN SIRO </p>
+   <ion-item lines="none">
+    <ion-img class="logo" src="../../assets/images/ticket.svg"></ion-img>
+    <ion-card class="card" expand="block"> <p class="style"> Nel carrello </p> </ion-card>
+    <ion-icon name="trash" class="trash"></ion-icon>
+   </ion-item>
+  </ion-card>
+
+  <ion-card class="biglietto">
+    <p class="titolo"> MANESKIN - MILANO 21-05-2021 MEDIOLANUM FORUM </p>
+    <ion-item lines="none">
+     <ion-img class="logo" src="../../assets/images/ticket.svg"></ion-img>
+     <ion-card class="card" expand="block"> <p class="style"> Nel carrello </p> </ion-card>
+     <ion-icon name="trash" class="trash"></ion-icon>
+    </ion-item>
+   </ion-card>
+
+   <ion-button [routerLink]="['/login']" class="procedi" expand="block"> <p class="style2"> Procedi </p> </ion-button>
 
 </ion-content>
