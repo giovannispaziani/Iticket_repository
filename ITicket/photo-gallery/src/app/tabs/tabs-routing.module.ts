@@ -26,6 +26,15 @@ const routes: Routes = [
       },
       
       {
+        path: 'assistenza',
+        loadChildren: () => import('../assistenza/assistenza.module').then(m => m.AssistenzaPageModule)
+      },
+      {
+        path: 'cambio-nominativo-biglietto',
+        loadChildren: () => import('../cambio-nominativo-biglietto/cambio-nominativo-biglietto.module').then(m => m.CambioNominativoBigliettoPageModule)
+      },
+
+      {
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'
