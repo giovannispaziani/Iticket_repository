@@ -4,6 +4,30 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true" class="ciao">
+
+  <ion-card-header>
+    <ion-card-title class="cambio"> Cambia il nome del tuo biglietto: </ion-card-title>
+    <ion-img class="logo" src="../../assets/images/ticket.svg"></ion-img>
+  </ion-card-header>
+  <ion-card class="dati">
+    <ion-input placeholder="Nome" class="dati2" type="nome"></ion-input>
+  </ion-card>
+  <ion-card class="dati">
+    <ion-input placeholder="Cognome" class="dati2" type="cognome"></ion-input>
+  </ion-card>
+  <ion-card class="dati">
+    <ion-input placeholder="Codice Fiscale" class="dati2" type="codicefiscale"></ion-input>
+  </ion-card>
+  <ion-card class="dati">
+    <ion-input placeholder="Numero patente di guida" class="dati2" type="numeropatente"></ion-input>
+  </ion-card>
+  <ion-card class="biglietto">
+    
+    <ion-item lines="none">
+      <ion-card class="card" expand="block"> <p class="procedi"> Clicca per procedere: </p> </ion-card>
+      <ion-icon name="arrow-forward-circle" class="arrow"></ion-icon>
+    </ion-item>
+  </ion-card>
 
 </ion-content>

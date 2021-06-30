@@ -1,0 +1,85 @@
+.ciao{
+    --ion-background-color: #121212;
+}
+
+.cambio{
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 85%;
+    position: absolute;
+    margin-left: 5px;
+    margin-right: auto; 
+}
+
+.logo{
+    height : 30%;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+
+
+.dati {
+    
+    position : relative;
+    margin-top : 2%;
+    --ion-background-color : #FFFFFF;
+    height: 10%;
+    
+}
+
+.dati2{
+    color: black;
+    font-weight: bold;
+    margin-top: 3px;
+    margin-bottom: auto;
+}
+
+.arrow{
+    color: #3880ff; 
+    font-size: 245%;
+    margin-bottom: auto;
+    
+}
+
+.procedi{
+    color: white;
+    padding-left: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 90%;
+    margin-top: 6px;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.biglietto{
+    
+    --ion-background-color: white;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    margin-top: 2%;
+    height: 10%;
+}
+
+.style{
+    font-size: 80%;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: absolute;
+    left: 4%;
+}
+
+.card{
+    --ion-background-color: #3880ff;
+    height: 50%;
+    width: 75%;
+    color: white;
+    margin-right: 20px;
+    margin-left: auto;
+    margin-bottom: 20px;
+  }
