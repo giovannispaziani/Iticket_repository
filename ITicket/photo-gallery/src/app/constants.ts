@@ -7,10 +7,12 @@ export const URL = {
     LOGOUT: URL_BASE + '/logout',
     UPDATE_PROFILO: URL_BASE + '/utente/updateprofilo',
     NOTIZIE: URL_BASE + '/notizie',
+    EVENTI: URL_BASE + '/eventi',
     INSEGNAMENTI: URL_BASE + '/insegnamenti',
     APPELLI: URL_BASE + '/appelli',
-    REGISTRAZIONE: URL_BASE + '/utente/createprofilo',
-    CARRELLO: URL_BASE + '/carrello'
+    REGISTRAZIONE: URL_BASE + '/createprofilo',
+    CARRELLO: URL_BASE + '/carrello',
+    ADDCARRELLO: URL_BASE + '/carrello/createcarrello',
 };
 
 export const X_AUTH = 'X-Auth';

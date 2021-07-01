@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { CalendarioEventiPage } from './calendario-eventi.page';
+import { CalendarioEventiPage } from './calendarioEventi.page';
 
 const routes: Routes = [
   {

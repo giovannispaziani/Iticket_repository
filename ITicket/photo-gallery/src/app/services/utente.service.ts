@@ -20,10 +20,12 @@ export class UtenteService {
     private authToken: string;
     private loggedIn$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
     private utente$: BehaviorSubject<Utente> = new BehaviorSubject<Utente>({} as Utente);
+    private utente : Utente;
 
     constructor(private http: HttpClient, private storage: Storage) {
 
         this.storage.get(AUTH_TOKEN).then((token) => {
+            console.log("startando utenteservice..." + " isLogged " + this.loggedIn$.value);
             console.log(token);
             this.authToken = token;
             if (token !== null && token !== undefined && token !== '') {
@@ -50,6 +52,17 @@ export class UtenteService {
                 // Utente memorizzato nello storage in modo tale che se si vuole cambiare il
                 // profilo dell'utente stesso non si fa una chiamata REST.
                 this.storage.set(UTENTE_STORAGE, resp.body);
+
+                /*this.storage.get(UTENTE_STORAGE).then((utente) => {
+                    this.utente$.next(utente);
+                    this.utente$.subscribe({
+                      next: utente =>{
+                        this.utente=utente;
+                        console.log("ECCOMI NEL METODO LOGIN; STO INSERENDO NELLO STORAGE : Nome dell'utente loggato: "  + this.utente.nome + " id dell'utente loggato : " + this.utente.id + "email utente " + this.utente.email + " telefono " + this.utente.telefono);
+                      }
+                    }); 
+                });*/
+
                 // update dell'observable dell'utente
                 this.utente$.next(resp.body);
                 this.loggedIn$.next(true);
@@ -60,7 +73,7 @@ export class UtenteService {
 
     logout() {
         this.authToken = null;
-        this.loggedIn$.next(true);
+        this.loggedIn$.next(false);
         this.storage.remove(AUTH_TOKEN);
         this.storage.remove(UTENTE_STORAGE);
 
@@ -77,6 +90,8 @@ export class UtenteService {
     }
 
     isLogged(): Observable<boolean> {
+        console.log("Avvio is logged");
+        console.log(this.loggedIn$.value);
         return this.loggedIn$.asObservable();
     }
 

@@ -16,14 +16,18 @@
  <ion-card class="profilo">
     <ion-item lines="none">
     <ion-icon name="person" class="person" slot="start"></ion-icon>
+    <!-- VEDERE SE SEI LOGGATO O MENO DA HTML; CAMBIA LA ROUTER LINK : -->
+    <!--<ion-button *ngIf="notLoggato==false" [routerLink]="['/tabs/login']" class="button" expand="block"> <p class="style"> Profilo Utente </p> </ion-button>
+    <ion-button *ngIf="notLoggato==true" [routerLink]="['/tabs/registrazione']" class="button" expand="block"> <p class="style"> Profilo Utente </p> </ion-button>
+    -->
     <ion-button [routerLink]="['/tabs/login']" class="button" expand="block"> <p class="style"> Profilo Utente </p> </ion-button>
-    </ion-item>
+  </ion-item>
   </ion-card>
 
   <ion-card class="profilo2">
     <ion-item lines="none">
     <ion-icon name="calendar" class="person" slot="start"></ion-icon>
-    <ion-button [routerLink]="['/tabs/carrello']" class="button" expand="block"> <p class="style"> Calendario Eventi </p> </ion-button>
+    <ion-button [routerLink]="['/tabs/calendarioEventi']" class="button" expand="block"> <p class="style"> Calendario Eventi </p> </ion-button>
     </ion-item>
   </ion-card>
 

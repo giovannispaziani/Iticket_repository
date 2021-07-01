@@ -12,15 +12,18 @@ export class AuthGuard implements CanActivate, CanActivateChild {
     constructor(private utenteService: UtenteService, private navController: NavController) {
     }
 
+
     canActivate(): Observable<boolean> {
+        
 
         return this.utenteService.isLogged()
             .pipe(
                 take(1),
                 map((isLoggedIn: boolean) => {
+                    console.log("Controllo se sei loggato : ");
                     console.log(isLoggedIn);
                     if (!isLoggedIn) {
-                        this.navController.navigateRoot('login');
+                        this.navController.navigateRoot('/tabs/login');
                         return false;
                     }
                     return true;

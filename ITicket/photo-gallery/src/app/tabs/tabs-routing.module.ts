@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TabsPage } from './tabs.page';
+import {AuthGuard} from '../guard/auth.guard';
+
 
 const routes: Routes = [
   {
@@ -32,15 +34,21 @@ const routes: Routes = [
       loadChildren: () => import('../registrazione/registrazione.module').then(m => m.RegistrazionePageModule)
     },
     {
-      path: 'carrello',
-      loadChildren: () => import('../carrello/carrello.module').then(m => m.CarrelloPageModule)
+      path: 'carrello/:id',
+      loadChildren: () => import('../carrello/carrello.module').then(m => m.CarrelloPageModule),
+      canActivateChild: [AuthGuard]
+    },
+    {
+      path: 'calendarioEventi',
+      loadChildren: () => import('../calendarioEventi/calendarioEventi.module').then(m => m.CalendarioEventiPageModule),
     },
 
       {
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'
-      }
+      },
+
     ]
   },
   {

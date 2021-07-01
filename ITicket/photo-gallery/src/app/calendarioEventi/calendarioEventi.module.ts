@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { CalendarioEventiPageRoutingModule } from './calendario-eventi-routing.module';
+import { CalendarioEventiPageRoutingModule } from './calendarioEventi-routing.module';
 
-import { CalendarioEventiPage } from './calendario-eventi.page';
+import { CalendarioEventiPage } from './calendarioEventi.page';
 
 @NgModule({
   imports: [

@@ -1,13 +1,11 @@
 export class Utente {
-
-    username: string;
+    id: number;
     nome: string;
     cognome: string;
+    username: string;
+    password: string;    
     email: string;
     matricola: string;
     telefono: string;
     ruolo: string;
-    password: string;    
-
-
 }

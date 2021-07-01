@@ -51,8 +51,8 @@ const routes: Routes = [
     loadChildren: () => import('./cambio-nominativo-biglietto/cambio-nominativo-biglietto.module').then( m => m.CambioNominativoBigliettoPageModule)
   },
   {
-    path: 'calendario-eventi',
-    loadChildren: () => import('./calendario-eventi/calendario-eventi.module').then( m => m.CalendarioEventiPageModule)
+    path: 'calendarioEventi',
+    loadChildren: () => import('./calendarioEventi/calendarioEventi.module').then( m => m.CalendarioEventiPageModule)
   },
   {
     path: 'notizie',

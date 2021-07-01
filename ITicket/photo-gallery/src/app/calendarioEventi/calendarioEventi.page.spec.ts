@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { CalendarioEventiPage } from './calendario-eventi.page';
+import { CalendarioEventiPage } from './calendarioEventi.page';
 
 describe('CalendarioEventiPage', () => {
   let component: CalendarioEventiPage;

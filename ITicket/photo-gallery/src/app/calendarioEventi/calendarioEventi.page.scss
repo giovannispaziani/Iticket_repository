@@ -1,0 +1,62 @@
+.titolo {
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: right;
+    margin-right: 25px;
+   position: relative;
+   top: -40px;
+ }
+ 
+ .descrizione {
+     display: block;
+ position: relative;
+ top: -15px;
+ font-size: xx-small;
+ text-align: center;
+ padding-bottom: 3%;
+ padding-top: 2px;
+  }
+ 
+ .data{
+     margin-top: 3px;
+     margin-right: 25px;
+     position: relative;
+     top:-57px;
+     font-size: x-small;
+     font-weight: bold;
+     text-align: right;
+     color: burlywood;
+ 
+      }
+ 
+ .paginaLogin {
+     --ion-background-color: #121212;
+     height: 28%;
+ }
+ 
+ .ncard{
+     max-height:50px;
+     padding-top: -10px;
+     margin-top: 10px;
+     margin-bottom: 10px;
+     border-top: 1px solid #ffffff;
+ }
+ 
+ 
+ .logo {
+  height : 28%;
+  margin-top : 6%;
+  display: block;
+  width: 30%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 8%;
+ }
+
+ .biglietto {
+    height : 12%;
+    width: 30%;
+    margin-left: 25px;
+    margin-top: 12px;
+   }
+ 

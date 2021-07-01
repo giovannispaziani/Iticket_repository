@@ -1,0 +1,102 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="titolo">
+      Calendario
+    </ion-title>
+    <ion-buttons slot="start">
+
+      <ion-button disabled="true">
+
+        <ion-icon name="add-outline" size="large" slot="icon-only" style="color: rgba(42, 56, 211, 0);"></ion-icon>
+
+        </ion-button> 
+
+      </ion-buttons>
+
+    
+
+      <ion-buttons slot="end">
+
+      <ion-button disabled="true">
+
+        <ion-icon name="add-outline" size="large" slot="icon-only" style="color: rgba(42, 56, 211, 0);"></ion-icon>
+
+      </ion-button>      <!-- Inutile, solo per centrare l'ion-title "Recensioni" -->
+
+      </ion-buttons>
+
+
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="paginaLogin">
+  <ion-list>
+  <ion-item>
+    <ion-img class="logo" src="../../assets/images/bb.svg"></ion-img>
+  </ion-item>
+
+<ion-card class="ncard" *ngFor="let evento of eventi$ | async"  [routerLink]="['/tabs/carrello', evento.id]">
+  <ion-img class="biglietto" src="../../assets/images/bb.svg"></ion-img>
+    <p class="titolo"> {{evento.titolo}}  </p>
+    <p class="data"> 23-05-2021  </p>
+</ion-card>
+
+<ion-card class="ncard">
+  <ion-img class="biglietto" src="../../assets/images/bb.svg"></ion-img>
+    <p class="titolo"> PINO DANIELE  </p>
+    <p class="data"> 23-05-2021  </p>
+</ion-card>
+
+<ion-card class="ncard">
+  <ion-img class="biglietto" src="../../assets/images/bb.svg"></ion-img>
+    <p class="titolo"> PINO DANIELE  </p>
+    <p class="data"> 23-05-2021  </p>
+</ion-card>
+
+<ion-card class="ncard">
+  <ion-img class="biglietto" src="../../assets/images/bb.svg"></ion-img>
+    <p class="titolo"> PINO DANIELE  </p>
+    <p class="data"> 23-05-2021  </p>
+</ion-card>
+
+<ion-card class="ncard">
+  <ion-img class="biglietto" src="../../assets/images/bb.svg"></ion-img>
+    <p class="titolo"> PINO DANIELE  </p>
+    <p class="data"> 23-05-2021  </p>
+</ion-card>
+
+<ion-card class="ncard">
+  <ion-img class="biglietto" src="../../assets/images/bb.svg"></ion-img>
+    <p class="titolo"> PINO DANIELE  </p>
+    <p class="data"> 23-05-2021  </p>
+</ion-card>
+
+<ion-card class="ncard">
+  <ion-img class="biglietto" src="../../assets/images/bb.svg"></ion-img>
+    <p class="titolo"> PINO DANIELE  </p>
+    <p class="data"> 23-05-2021  </p>
+</ion-card>
+
+<ion-card class="ncard">
+  <ion-img class="biglietto" src="../../assets/images/bb.svg"></ion-img>
+    <p class="titolo"> PINO DANIELE  </p>
+    <p class="data"> 23-05-2021  </p>
+</ion-card>
+
+<ion-card class="ncard">
+  <ion-img class="biglietto" src="../../assets/images/bb.svg"></ion-img>
+    <p class="titolo"> PINO DANIELE  </p>
+    <p class="data"> 23-05-2021  </p>
+</ion-card>
+
+
+
+</ion-list>
+</ion-content>
+
+
+
+
+
+
