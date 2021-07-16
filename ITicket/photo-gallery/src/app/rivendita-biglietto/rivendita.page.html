@@ -21,13 +21,15 @@
   <ion-card class="impo">
     <ion-item>
       <ion-label>Evento</ion-label>
-      <ion-select [(ngModel)]="selectedOptions" multiple="true" cancelText="Annulla" okText="Seleziona" (ionChange)="printVal()">
-        <ion-select-option *ngFor="let option of options; let i = index" [(value)]="option">{{nomiEventi[i]}}</ion-select-option>
+      <ion-select multiple="true" cancelText="Annulla" okText="Seleziona">
+        <ion-select-option value="Fedez">Fedez</ion-select-option>
+        <ion-select-option value="Lucio Dalla">Lucio Dalla</ion-select-option>
+        <ion-select-option value="Achille Lauro">Achille Lauro</ion-select-option>
       </ion-select>
     </ion-item>
   </ion-card>
 
-  <ion-card class="impo" [routerLink]="['/tabs/pubblicazione-annuncio', selectedOptionsStringify]" routerDirection="forward" detail="true">
+  <ion-card class="impo">
     <p class="desc"> VENDI</p>
     <ion-img class="carrello" src="../../assets/images/sell.png"></ion-img>
   </ion-card>

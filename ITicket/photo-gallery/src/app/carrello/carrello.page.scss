@@ -8,13 +8,13 @@
     padding-bottom: 0px;
     padding-top: 0px;
     margin-top: 5%;
-    height: 35%;
+    height: /*35%;*/ 46%;
 }
 
 .card{
     --ion-background-color: #3880ff;
-    height: 40%;
-    width: 150%;
+    height: 80%;
+    width: 350%;
     color: white;
     margin-right: 20px;
   }
@@ -33,15 +33,21 @@
 }
 
 .trash{
-    font-size: 400%;
+    font-size: 170%;
+    margin-left : 45%;
+    margin-top : -1%;
 }
 
 .procedi{
-    margin: auto;
-    height: 5%;
-    width: 30%;
-    margin-bottom: 5%;
+    margin-left: 15%;
+    margin-right: 15%;
+    //margin : auto;
+    //height: 10%;
+    //padding-top: 10%;
+    //width: 30%;
+   // margin-bottom: 5%;
     color: white;
+    //position : absolute;
 }
 
 .titolo {
@@ -50,7 +56,21 @@
     text-align: center;
     margin-right: 5%;
     margin-left: 5%;
+    color: burlywood;
+
 } 
+
+
+.nome {
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    top: -30px;
+    font-size: medium;
+    right: auto;
+    margin-left: 23px;
+    color: burlywood;
+ }
 
 /*.carrello{
     --ion-background-color: #3880ff;
@@ -70,8 +90,79 @@
     left: 4%;
 }
 
-.style2{
+.styles{
     font-size: 80%;
     font-weight: bold;
     text-transform: uppercase;
+    //position: absolute;
+    //top: 23%;
+    //left: 4%;
+    text-align : center;
+}
+
+.prezzoTotale{
+    font-size: 100%;
+    font-weight: bold;
+    text-transform: uppercase;
+    //position: absolute;
+    //top: 23%;
+    //left: 4%;
+    text-align : center;
+}
+
+
+.style2{
+    font-size: 100%;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.quantita{
+    width : 35%;
+    height : 3%;
+    border:none;
+    opacity:1;
+}
+
+.quantita-item {
+    height : 30%;
+}
+
+.quantita-label {
+    font-size: 80%;
+    font-weight: bold;
+    text-transform: uppercase;
+    //text-align : center;
+    //position: absolute;
+    //top: -12%;
+    //left: 4%;}
+}
+
+.prezzo-label {
+    font-size: 80%;
+    font-weight: bold;
+    text-transform: uppercase;
+    //text-align : center;
+    //position: absolute;
+    //top: -12%;
+    //left: 4%;}
+}
+
+.importoPrezzo-label {
+    font-size: 80%;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align : right;
+    //margin-top : 2%;
+    //position: absolute;
+    //top: -12%;
+    padding-right : 5px;
+    //left: 4%;}
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {  
+
+   opacity: 1;
+
 }

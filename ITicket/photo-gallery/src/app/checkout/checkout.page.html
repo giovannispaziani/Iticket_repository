@@ -1,9 +1,68 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>checkout</ion-title>
+    <ion-title>Checkout</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-card class="ncard" *ngFor="let checkoutItem of checkoutItems$ | async">
+    <ion-img class="profilo" src="../../assets/images/bb.svg"></ion-img>
+      <p class="nome"> {{checkoutItem.titolo}}</p>
+      <p class="data"> {{checkoutItem.dataEvento}} </p>
+      <p class="luogo"> {{checkoutItem.descrizione}}</p>
+      <p class="quant"> quantità : {{checkoutItem.quantita}}</p>
+      <p class="quant"> prezzo: €{{checkoutItem.prezzo}}</p>
+      <p class="quant"> orario di apertura : {{checkoutItem.orarioApertura}}</p>
+      <p class="quant"> posti disponibili : {{checkoutItem.postiDisponibili}}</p>
+  </ion-card>
+
+  <!--<ion-card class="ncard">
+    <ion-img class="profilo" src="../../assets/images/bb.svg"></ion-img>
+      <p class="nome"> LUCIO DALLA</p>
+      <p class="data"> 27-08-2021 </p>
+      <p class="luogo"> L'Aquila i</p>
+      <p class="quant"> quantità: 3</p>
+  </ion-card>
+
+  <ion-card class="ncard">
+    <ion-img class="profilo" src="../../assets/images/bb.svg"></ion-img>
+      <p class="nome"> Miley Cirus</p>
+      <p class="data"> 22-05-2021 </p>
+      <p class="luogo"> Roma</p>
+      <p class="quant"> quantità: 5</p>
+  </ion-card> -->
+
+  <p class="prezzoTotale"> prezzo totale: €{{prezzoTotale}}</p>
+
+  <p class="footer3"> inserisci indirizzo Spedizione </p>
+
+  <ion-card class="ncard2">
+      <ion-item>
+        <ion-label position="floating">Indirizzo Spedizione</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Città</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">CAP</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Stato</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+  </ion-card>
+
+  <p class="footer"> Account </p>
+  <p class="footer2"> ginnamorati78@gmail.com </p>
+
+
+  <ion-card class="impo2 " [routerLink]="['/tabs/pagamento']">
+    <p class="desc"> procedi </p>
+    <ion-img class="carrello" src="../../assets/images/sell.png"></ion-img>
+  </ion-card>
 
 </ion-content>
+

@@ -13,6 +13,12 @@ export const URL = {
     REGISTRAZIONE: URL_BASE + '/createprofilo',
     CARRELLO: URL_BASE + '/carrello',
     ADDCARRELLO: URL_BASE + '/carrello/createcarrello',
+    CARRELLOCHECKOUT: URL_BASE + '/carrello/checkout',
+    CARRELLOEXISTS : URL_BASE + '/carrello/exists',
+    CARRELLOFIND : URL_BASE + '/carrello/findById',
+    CARRELLOAGGIORNAQUANTITA : URL_BASE + '/carrello/aggiornaQuantita',
+    CARRELLODELETEBYEVENTO : URL_BASE + '/carrello/deleteItemByIdEvento',
+    BIGLIETTO: URL_BASE + '/biglietto',
 };
 
 export const X_AUTH = 'X-Auth';

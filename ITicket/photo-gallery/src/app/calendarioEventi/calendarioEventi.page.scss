@@ -5,6 +5,34 @@
     margin-right: 25px;
    position: relative;
    top: -40px;
+   //aggiunto :
+   color: burlywood;
+
+ }
+
+ .descrizioneee {
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: right;
+    margin-right: 25px;
+   position: relative;
+   top: -40px;
+   //aggiunto :
+   color: burlywood;
+   //font-size: 85%; 
+ }
+
+ .descrizionee {
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: right;
+    margin-right: 25px;
+   position: relative;
+   top: -40px;
+   //aggiunto :
+   color: burlywood;
+   font-size: 85%;
+
  }
  
  .descrizione {
@@ -25,17 +53,19 @@
      font-size: x-small;
      font-weight: bold;
      text-align: right;
-     color: burlywood;
+     opacity : 100%;
+     font-style : white;
+     //color: burlywood;
  
       }
  
  .paginaLogin {
      --ion-background-color: #121212;
-     height: 28%;
+     //height: 28%;
  }
  
  .ncard{
-     max-height:50px;
+     max-height:/*50px*/ 50%;
      padding-top: -10px;
      margin-top: 10px;
      margin-bottom: 10px;

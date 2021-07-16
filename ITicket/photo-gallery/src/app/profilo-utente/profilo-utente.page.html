@@ -1,9 +1,35 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>profiloUtente</ion-title>
+    <ion-title>Profilo</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-card>
+    <ion-img class="impostazioni" src="../../assets/images/setting.png"></ion-img>
+  </ion-card>
+
+  <ion-card class="ncard">
+    <ion-img class="profilo" src="../../assets/images/man.png"></ion-img>
+      <p class="nome"> GIORGIO</p>
+      <p class="cognome"> INNAMORATI</p>
+      <p class="email"> ginnamorati78@gmail.com  </p>
+  </ion-card>
+
+  <ion-card class="impo" [routerLink]="['/tabs/carrello']">
+    <p class="desc"> CARRELLO</p>
+    <ion-img class="carrello" src="../../assets/images/carrello.png"></ion-img>
+  </ion-card>
+
+
+  <ion-card class="impo" [routerLink]="['/tabs/rivendita-biglietto']">
+    <p class="desc"> RIVENDITA</p>
+    <ion-img class="carrello" src="../../assets/images/sell.png"></ion-img>
+  </ion-card>
+
+  <ion-card class="impo">
+    <p class="desc"> ASSISTENZA</p>
+    <ion-img class="carrello" src="../../assets/images/assistenza.png"></ion-img>
+  </ion-card>
 
 </ion-content>

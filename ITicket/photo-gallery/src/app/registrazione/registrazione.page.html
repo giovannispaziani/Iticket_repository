@@ -1,4 +1,4 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar color="primary" text-center>
     <ion-title>{{'PROFILO_TITOLO'}}</ion-title>
   </ion-toolbar>
@@ -17,12 +17,12 @@
         <ion-label position="floating">{{ 'TELEFONO'}}</ion-label>
         <ion-input type="text" formControlName="telefono"></ion-input>
       </ion-item>
-      <!--   <ion-item>
+         <ion-item>
         <ion-label position="fixed">{{ 'LANGUAGE'}}</ion-label>
         <ion-select formControlName="linguaPreferita" okText="{{ 'SAVE_BUTTON'}}" cancelText="{{ 'CANCEL_BUTTON' }}">
           <ion-select-option *ngFor="let lingua of lingue" [value]="lingua.valore">{{lingua.etichetta}}</ion-select-option>
         </ion-select>
-      </ion-item>  --> 
+      </ion-item>  
     </ion-list>
     <div margin-top="30px" align="center">
       <ion-button icon-left size="medium" shape="round" color="primary" (click)="onSubmit()" tappable>
@@ -33,4 +33,66 @@
       </ion-button>
     </div>
   </form>
+</ion-content>   --> 
+
+
+
+
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="titolo">
+      Registrati
+    </ion-title>
+    <ion-buttons slot="start">
+
+      <ion-button disabled="true">
+
+        <ion-icon name="add-outline" size="large" slot="icon-only" style="color: rgba(42, 56, 211, 0);"></ion-icon>
+
+        </ion-button> 
+
+      </ion-buttons>
+
+    
+
+      <ion-buttons slot="end">
+
+      <ion-button disabled="true">
+
+        <ion-icon name="add-outline" size="large" slot="icon-only" style="color: rgba(42, 56, 211, 0);"></ion-icon>
+
+      </ion-button>      <!-- Inutile, solo per centrare l'ion-title "Recensioni" -->
+
+      </ion-buttons>
+
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="paginaLogin">
+  <ion-item>
+    <ion-img class="logo" src="../../assets/images/bb.svg"></ion-img>
+  </ion-item>
+  
+  <form [formGroup]="profiloFormModel">
+    <ion-card class="inputLoginCard">
+      <ion-input formControlName="nome" placeholder="Nome" type="email"></ion-input>
+    </ion-card>
+    <ion-card class="inputLoginCard">
+      <ion-input formControlName="cognome" placeholder="Cognome" type="email"></ion-input>
+    </ion-card>
+    <ion-card class="inputLoginCard">
+      <ion-input formControlName="email" placeholder="Email" type="email" formControlName="email"></ion-input>
+    </ion-card>
+    <ion-card class="inputLoginCard">
+      <ion-input formControlName="password" placeholder="Password" type="email"></ion-input>
+    </ion-card>
+    <ion-card class="inputLoginCard">
+      <ion-input formControlName="confermaPassword" placeholder="Conferma Password" type="email"></ion-input>
+    </ion-card>
+    <ion-button class="button" expand="block" (click)="onSubmit()"  tappable> Registrati </ion-button>
+    <p class="link"> <a href ="/tabs/login">  Hai il tuo account ? Log-In  </a></p>
+  </form>
 </ion-content>
+

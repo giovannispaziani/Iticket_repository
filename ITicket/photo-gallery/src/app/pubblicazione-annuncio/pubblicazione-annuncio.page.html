@@ -1,9 +1,36 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>pubblicazione_annuncio</ion-title>
+    <ion-title>Pubblicazione</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-card class="ncard">
+    <ion-img class="profilo" src="../../assets/images/bb.svg"></ion-img>
+      <p class="nome"> PUBBLICA ANNUNCIO</p>
+      <p class="cognome"> RIVENDITA</p>
+      <p class="email"> Account:</p>
+      <p class="email2"> ginnamorati78@gmail.com</p>
+  </ion-card>
+
+  <ion-card class="impo">
+    <ion-item>
+      <ion-input placeholder="Nome Evento"></ion-input>
+    </ion-item>  
+    <ion-item>
+      <ion-input placeholder="Data"></ion-input>
+    </ion-item> 
+    <ion-item>
+    <ion-input placeholder="Prezzo"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input placeholder="Causa Rivendita"></ion-input>
+  </ion-item>
+  </ion-card>
+
+  <ion-card class="impo2" (click)="vendi()">
+    <p class="desc"> vendi</p>
+    <ion-img class="carrello" src="../../assets/images/sell.png"></ion-img>
+  </ion-card>
 
 </ion-content>

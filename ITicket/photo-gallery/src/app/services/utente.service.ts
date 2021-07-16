@@ -109,8 +109,10 @@ export class UtenteService {
     }
 
     registrazione(nuovoUtente: Utente): Observable<Utente> {
+        console.log("Avvio registrazione, password utente : " + nuovoUtente.password);
         return this.http.post<Utente>(URL.REGISTRAZIONE, nuovoUtente, {observe: 'response'}).pipe(
            map((resp: HttpResponse<Utente>) => {
+            console.log("dentro map, password utente : " + nuovoUtente.password);
                 // Aggiornamento dell'utente nello storage.
                 // Utente memorizzato nello storage per evitare chiamata REST quando si vuole modificare il profilo
                 // e se l'utente chiude la app e la riapre i dati sono gia' presenti

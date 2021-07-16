@@ -1,6 +1,4 @@
-
-
-export class Evento {
+export class Checkout {
     id: number;
     titolo: string;
     descrizione: string;
@@ -8,5 +6,5 @@ export class Evento {
     orarioApertura: string;
     postiDisponibili: number;
     prezzo: number;
-
+    quantita : number;
 }
