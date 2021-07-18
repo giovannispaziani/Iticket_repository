@@ -6,6 +6,7 @@ export const URL = {
     LOGIN: URL_BASE + '/login',
     LOGOUT: URL_BASE + '/logout',
     UPDATE_PROFILO: URL_BASE + '/utente/updateprofilo',
+    UTENTE: URL_BASE + '/utente',
     NOTIZIE: URL_BASE + '/notizie',
     EVENTI: URL_BASE + '/eventi',
     INSEGNAMENTI: URL_BASE + '/insegnamenti',
@@ -19,6 +20,7 @@ export const URL = {
     CARRELLOAGGIORNAQUANTITA : URL_BASE + '/carrello/aggiornaQuantita',
     CARRELLODELETEBYEVENTO : URL_BASE + '/carrello/deleteItemByIdEvento',
     BIGLIETTO: URL_BASE + '/biglietto',
+    BIGLIETTOCAMBIANOMINATIVO: URL_BASE + '/biglietto/cambioNominativoBiglietto',
 };
 
 export const X_AUTH = 'X-Auth';

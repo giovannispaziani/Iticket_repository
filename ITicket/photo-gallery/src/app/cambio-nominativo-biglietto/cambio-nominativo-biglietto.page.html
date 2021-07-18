@@ -1,9 +1,102 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>cambio_nominativo_biglietto</ion-title>
+    <ion-title>Cambio nominativo biglietto</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true" class="ciao">
+
+  <ion-card-header>
+    <ion-img class="logo" src="../../assets/images/ticket.svg"></ion-img>
+    <ion-card-title class="cambio">Seleziona biglietto/i:</ion-card-title>
+  </ion-card-header>
+
+
+  <ion-card class="impo">
+    <ion-item>
+      <ion-label>Biglietto/i</ion-label>
+      <ion-select [(ngModel)]="selectedOptions" multiple="true" cancelText="Annulla" okText="Seleziona" (ionChange)="printVal()">
+        <ion-select-option *ngFor="let option of options; let i = index" [(value)]="option">{{nomiEventi[i]}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-card>
+
+  <ion-card-header>
+    <ion-img class="logo2" src="../../assets/images/man.png"></ion-img>
+    <ion-card-title class="cambio2">Inserisci i dati del nuovo intestatario del biglietto:</ion-card-title>
+
+</ion-card-header>
+
+  <form [formGroup]="cambioNominativoFormModel" class="list-form">
+    
+
+    <ion-item no-padding class="animated fadeInUp">
+      <ion-label position="floating">
+        <ion-icon name="contact" item-start></ion-icon>{{ 'CODICE FISCALE' }}</ion-label>
+      <ion-input color="secondary" type="email" formControlName="codiceFiscale"></ion-input>
+    </ion-item>
+    <p ion-text class="text08" *ngIf="cambioNominativoFormModel.get('codiceFiscale').touched && cambioNominativoFormModel.get('codiceFiscale').invalid">
+      <ion-text color="danger">{{ 'CODICE FISCALE_REQUIRED' }}</ion-text>
+    </p>
+    <div margin-top="20px">
+      <ion-button class="buttonCambiaNominativo" icon-left size="medium" expand="full" shape="round" color="primary" (click)="cabiaNominativo()" [disabled]="!cambioNominativoFormModel.valid" tappable>
+        <ion-icon name="log-in"></ion-icon>
+        {{ 'CAMBIA NOMINATIVO' }}
+      </ion-button>
+    </div>
+  </form>
+
+
+    <!-- Login form 
+    <form [formGroup]="loginFormModel" class="list-form">
+      <ion-item no-padding class="animated fadeInUp">
+        <ion-label position="floating">
+          <ion-icon name="contact" item-start></ion-icon>{{ 'USERNAME' }}</ion-label>
+        <ion-input color="secondary" type="email" formControlName="username"></ion-input>
+      </ion-item>
+      <p ion-text class="text08" *ngIf="loginFormModel.get('username').touched && loginFormModel.get('username').invalid">
+        <ion-text color="danger">{{ 'USERNAME_REQUIRED' }}</ion-text>
+      </p>
+      <ion-item no-padding class="animated fadeInUp">
+        <ion-label position="floating">
+          <ion-icon name="lock" item-start></ion-icon>{{ 'PASSWORD' }}</ion-label>
+        <ion-input color="secondary" type="password" formControlName="password"></ion-input>
+      </ion-item>
+      <p ion-text class="text08" *ngIf="loginFormModel.get('password').touched && loginFormModel.get('password').invalid">
+        <ion-text color="danger">{{ 'PASSWORD_REQUIRED' }}</ion-text>
+      </p>
+      <div margin-top="20px">
+        <ion-button icon-left size="medium" expand="full" shape="round" color="primary" (click)="onLogin()" [disabled]="!loginFormModel.valid" tappable>
+          <ion-icon name="log-in"></ion-icon>
+          {{ 'LOGIN_BUTTON' }}
+        </ion-button>
+      </div>
+    </form>  -->
+
+
+
+
+ <!-- <ion-card class="dati">
+    <ion-input placeholder="Nome" class="dati2" type="nome"></ion-input>
+  </ion-card>
+  <ion-card class="dati">
+    <ion-input placeholder="Cognome" class="dati2" type="cognome"></ion-input>
+  </ion-card>
+  
+<ion-card class="dati">
+    <ion-input placeholder="Codice Fiscale" class="dati2" type="codicefiscale"></ion-input>
+  </ion-card> 
+  <ion-card class="dati">
+    <ion-input placeholder="Numero patente di guida" class="dati2" type="numeropatente"></ion-input>
+  </ion-card>
+  <ion-card class="biglietto">
+    
+    <ion-item lines="none">
+      <ion-card class="card" expand="block"> <p class="procedi"> Clicca per procedere: </p> </ion-card>
+      <ion-icon name="arrow-forward-circle" class="arrow"></ion-icon>
+    </ion-item>
+  </ion-card> -->
 
 </ion-content>
+
+

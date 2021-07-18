@@ -18,7 +18,7 @@ import {map} from 'rxjs/operators';
 
 export class BigliettoService {
     private bigliettoAdd$: BehaviorSubject<Biglietto> = new BehaviorSubject<Biglietto>({} as Biglietto);
-
+    
 
     constructor(private http: HttpClient) {
     }
@@ -53,5 +53,25 @@ export class BigliettoService {
         const apiURL = `${URL.BIGLIETTO}/${eventoId}`;
         return this.http.delete<Biglietto>(apiURL);
     }
-d
+
+    getByIdEvento(eventoId: number) : Observable<Biglietto>{
+        const apiURL = `${URL.BIGLIETTO}/${eventoId}`;
+        return this.http.get<Biglietto>(apiURL);
+    }
+
+    updateBiglietto(biglietto : Biglietto)  : Observable<Biglietto> {
+            console.log("avvio update");
+            return this.http.post<Biglietto>(URL.BIGLIETTOCAMBIANOMINATIVO, biglietto, {observe: 'response'}).pipe(
+                map((resp: HttpResponse<Biglietto>) => {
+                    console.log("Sono in MAP aggiorna BIGLIETTO");
+                     // Aggiornamento dell'utente nello storage.
+                     // Utente memorizzato nello storage per evitare chiamata REST quando si vuole modificare il profilo
+                     // e se l'utente chiude la app e la riapre i dati sono gia' presenti
+                     
+                     // update dell'observable dell'utente
+                     this.bigliettoAdd$.next(resp.body);
+                     return resp.body;
+                 }));
+    }
+
 } 

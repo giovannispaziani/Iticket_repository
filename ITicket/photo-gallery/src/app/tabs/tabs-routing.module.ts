@@ -74,6 +74,16 @@ const routes: Routes = [
       loadChildren: () => import('../pubblicazione-annuncio/pubblicazione-annuncio.module').then(m => m.PubblicazioneAnnuncioPageModule),
       canActivateChild: [AuthGuard]  
     },
+    {
+      path: 'assistenza',
+      loadChildren: () => import('../assistenza/assistenza.module').then(m => m.AssistenzaPageModule),
+      canActivateChild: [AuthGuard]  
+    },
+    {
+      path: 'cambio-nominativo-biglietto',
+      loadChildren: () => import('../cambio-nominativo-biglietto/cambio-nominativo-biglietto.module').then(m => m.CambioNominativoBigliettoPageModule),
+      canActivateChild: [AuthGuard]  
+    },
 
       {
         path: '',

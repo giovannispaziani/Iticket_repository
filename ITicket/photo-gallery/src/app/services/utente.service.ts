@@ -6,6 +6,9 @@ import {AUTH_TOKEN, URL, UTENTE_STORAGE, X_AUTH} from '../constants';
 import {Utente} from '../model/utente.model';
 import {BehaviorSubject, Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
+import { catchError } from 'rxjs/operators';
+import { throwError } from 'rxjs';
+
 
 export interface Account {
     username: string;
@@ -122,5 +125,17 @@ export class UtenteService {
                 return resp.body;
             }));
     } 
+
+    findByCodiceFiscale(codiceFiscale: string) {
+        const apiURL = `${URL.UTENTE}/${codiceFiscale}`;
+        return this.http.get<Utente>(apiURL).pipe(
+            catchError((err) => {
+              console.log('error caught in service')
+              console.error(err);
+              return throwError(err);
+            })
+          )
+    }
+
 
 }
