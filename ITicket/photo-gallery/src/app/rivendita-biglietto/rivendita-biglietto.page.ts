@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import {Biglietto} from '../model/biglietto.model';
 import {BigliettoService} from '../services/biglietto.service';
 import {Evento} from '../model/evento.model';
+import {Utente} from '../model/utente.model';
 import {EventoService} from '../services/evento.service';
+import {UtenteService} from '../services/utente.service';
 import {ActivatedRoute} from '@angular/router';
 import {Observable} from 'rxjs';
 
@@ -22,9 +24,12 @@ export class RivenditaBigliettoPage implements OnInit {
   nomiEventi: string[] = [];
   selectedOptions: number[] = [];
   selectedOptionsStringify : string;
+  private utente: Utente;
+
   //public evento : Observable<Evento>;
 
-  constructor(private bigliettoService : BigliettoService, private eventoService : EventoService, private route: ActivatedRoute) {
+  constructor(private bigliettoService : BigliettoService, private utenteService: UtenteService,
+    private eventoService : EventoService, private route: ActivatedRoute) {
     /*route.params.subscribe(val => {
       this.ngOnInit();
     });*/
@@ -59,6 +64,9 @@ export class RivenditaBigliettoPage implements OnInit {
       });
       this.eventi$ = copiaEventi;
       this.nomiEventi = copiaNomiEventi;
+    });
+    this.utenteService.getUtente().subscribe((utente) => {
+      this.utente = utente;
     });
   }
 

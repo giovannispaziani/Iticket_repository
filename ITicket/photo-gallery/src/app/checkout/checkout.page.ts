@@ -4,6 +4,9 @@ import {Observable} from 'rxjs';
 import {tap} from 'rxjs/internal/operators/tap';
 import {CheckoutService} from '../services/checkout.service';
 import {ActivatedRoute} from '@angular/router';
+import {Utente} from '../model/utente.model';
+import {UtenteService} from '../services/utente.service';
+
 
 @Component({
   selector: 'app-checkout',
@@ -14,8 +17,9 @@ export class CheckoutPage implements OnInit {
 
   private checkoutItems$: Observable<Checkout[]>;
   private prezzoTotale : number;
+  private utente: Utente;
 
-  constructor(private checkoutService : CheckoutService, private route: ActivatedRoute) {
+  constructor(private checkoutService : CheckoutService, private route: ActivatedRoute,  private utenteService: UtenteService,) {
     //route.params.subscribe(val => {
     //  this.ngOnInit();
     //});
@@ -24,6 +28,10 @@ export class CheckoutPage implements OnInit {
   ngOnInit() {
     this.route.params.subscribe(val => {
       console.log("OnInit checkout");
+      this.utenteService.getUtente().subscribe((utente) => {
+        this.utente = utente;
+      });
+      console.log("indirizzo spedizione : " + this.utente.indirizzoSpedizione);
       this.checkoutItems$ = this.checkoutService.list();
       var prezzoTotalee  : number; 
       prezzoTotalee = 0;

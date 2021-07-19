@@ -7,6 +7,7 @@ import {Evento} from '../model/evento.model';
 import {EventoService} from '../services/evento.service';
 import {Observable,BehaviorSubject} from 'rxjs';
 import {ActivatedRoute} from '@angular/router';
+import {map} from 'rxjs/operators';
 
 
 
@@ -86,11 +87,11 @@ export class CambioNominativoBigliettoPage implements OnInit {
           this.biglietto.quantita = biglietto2.quantita;
           this.biglietto.prezzo = biglietto2.prezzo;
           console.log("codice fiscale : " + codiceFiscale);
-          this.utenteService.findByCodiceFiscale(codiceFiscale).subscribe((utente) => {
+          this.utenteService.findByCodiceFiscale(codiceFiscale).pipe(
+            map(utente => {
             this.biglietto.docenteCorrelato = utente;
-          }
-          );
-          this.bigliettoService.updateBiglietto(this.biglietto).subscribe();
+            this.bigliettoService.updateBiglietto(this.biglietto).subscribe();
+          })).subscribe();
         });
 
       // var bigliettoNuovo : Biglietto = biglietto;
@@ -109,9 +110,6 @@ export class CambioNominativoBigliettoPage implements OnInit {
    
     this.cambioNominativoFormModel.reset();
     
-    if(this.utenteService.findByCodiceFiscale(codiceFiscale).subscribe() != null) {
-      console.log("non è nullo");
-        }
     
 
    /* this.utenteService.login(account).subscribe((utente: Utente) => {

@@ -51,9 +51,6 @@ export class LoginPage implements OnInit {
         });
   }
 
-  logout() {
-    this.utenteService.logout();
-  }
 
   async showLoginError() {
     const alert = await this.alertController.create({

@@ -9,6 +9,7 @@ export const URL = {
     UTENTE: URL_BASE + '/utente',
     NOTIZIE: URL_BASE + '/notizie',
     EVENTI: URL_BASE + '/eventi',
+    EVENTOCREATE: URL_BASE + '/eventi/createEvento',
     INSEGNAMENTI: URL_BASE + '/insegnamenti',
     APPELLI: URL_BASE + '/appelli',
     REGISTRAZIONE: URL_BASE + '/createprofilo',

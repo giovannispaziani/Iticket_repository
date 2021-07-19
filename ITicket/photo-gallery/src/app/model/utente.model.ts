@@ -8,4 +8,6 @@ export class Utente {
     matricola: string;
     telefono: string;
     ruolo: string;
+    indirizzoSpedizione : string;
+    indirizzoFatturazione : string;
 }

@@ -6,4 +6,67 @@
 
 <ion-content>
 
+  <ion-card class="biglietto" [routerLink]="['/tabs/calendarioEventi']">
+    <ion-card-header>
+      <ion-img class="logo" src="../../assets/images/setting.png"></ion-img>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-card-title class="cambio"> Modifca le informazioni personali del tuo profilo e le credenziali del tuo account da utilizzare per eseguire l'accesso 
+      </ion-card-title>
+    </ion-card-content>
+  </ion-card>
+
+  <form [formGroup]="profiloFormModel" class="list-form">
+    
+    <ion-item no-padding class="animated fadeInUp">
+      <ion-label position="floating">
+        <ion-icon name="contact" item-start></ion-icon>{{ 'EMAIL:' }}</ion-label>
+      <ion-input color="secondary" type="email" formControlName="email"></ion-input>
+    </ion-item>
+    <p ion-text class="text08" *ngIf="profiloFormModel.get('email').touched && profiloFormModel.get('email').invalid">
+      <ion-text color="danger">{{ 'EMAIL_REQUIRED' }}</ion-text>
+    </p>
+    <ion-item no-padding class="animated fadeInUp">
+      <ion-label position="floating">
+        <ion-icon name="contact" item-start></ion-icon>{{ 'INDIRIZZO SPEDIZIONE:' }}</ion-label>
+      <ion-input color="secondary" type="email" formControlName="indirizzoSpedizione"></ion-input>
+    </ion-item>
+    <p ion-text class="text08" *ngIf="profiloFormModel.get('indirizzoSpedizione').touched && profiloFormModel.get('indirizzoSpedizione').invalid">
+      <ion-text color="danger">{{ 'INDIZIRIZZO SPEDIZIONE_REQUIRED' }}</ion-text>
+    </p>
+    <ion-item no-padding class="animated fadeInUp">
+      <ion-label position="floating">
+        <ion-icon name="contact" item-start></ion-icon>{{ 'INDIRIZZO FATTURAZIONE:' }}</ion-label>
+      <ion-input color="secondary" type="email" formControlName="indirizzoFatturazione"></ion-input>
+    </ion-item>
+    <p ion-text class="text08" *ngIf="profiloFormModel.get('indirizzoFatturazione').touched && profiloFormModel.get('indirizzoFatturazione').invalid">
+      <ion-text color="danger">{{ 'INDIRIZZO FATTURAZIONE_REQUIRED' }}</ion-text>
+    </p>
+    <ion-item no-padding class="animated fadeInUp">
+      <ion-label position="floating">
+        <ion-icon name="contact" item-start></ion-icon>{{ 'TELEFONO:' }}</ion-label>
+      <ion-input color="secondary" type="email" formControlName="telefono"></ion-input>
+    </ion-item>
+    <p ion-text class="text08" *ngIf="profiloFormModel.get('telefono').touched && profiloFormModel.get('telefono').invalid">
+      <ion-text color="danger">{{ 'TELEFONO_REQUIRED' }}</ion-text>
+    </p>
+    <ion-item no-padding class="animated fadeInUp">
+      <ion-label position="floating">
+        <ion-icon name="contact" item-start></ion-icon>{{ 'PASSWORD:' }}</ion-label>
+      <ion-input color="secondary" type="email" formControlName="password"></ion-input>
+    </ion-item>
+    <ion-item no-padding class="animated fadeInUp">
+      <ion-label position="floating">
+        <ion-icon name="contact" item-start></ion-icon>{{ 'CONFERMA PASSWORD:' }}</ion-label>
+      <ion-input color="secondary" type="email" formControlName="confermaPassword"></ion-input>
+    </ion-item>
+    <div margin-top="20px">
+      <ion-button class="buttonCambiaNominativo" icon-left size="medium" expand="full" shape="round" color="primary" (click)="aggiornaProfilo()" [disabled]="!profiloFormModel.valid" tappable>
+        {{ 'AGGIORNA PROFILO' }}
+      </ion-button>
+    </div>
+  </form>
+
+  <ion-button class="button" expand="block" expand="full" shape="round" color="primary"  (click)="logout()" > Logout </ion-button>
+
 </ion-content>

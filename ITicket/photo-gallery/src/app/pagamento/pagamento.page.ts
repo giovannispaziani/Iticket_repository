@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { CarrelloService } from '../services/carrello.service';
 import {Observable,BehaviorSubject} from 'rxjs';
-import {Carrello} from '../model/carrello.model';
+import {Utente} from '../model/utente.model';
 import {Biglietto} from '../model/biglietto.model';
 import {BigliettoService} from '../services/biglietto.service';
 import {ActivatedRoute} from '@angular/router';
 import {HttpClient, HttpHandler} from '@angular/common/http';
+import {UtenteService} from '../services/utente.service';
+
 
 
 
@@ -15,13 +17,17 @@ import {HttpClient, HttpHandler} from '@angular/common/http';
   styleUrls: ['./pagamento.page.scss'],
 })
 export class PagamentoPage implements OnInit {
+  private utente: Utente;
 
 
 
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute,private utenteService: UtenteService) { }
 
   ngOnInit() {
+    this.utenteService.getUtente().subscribe((utente) => {
+      this.utente = utente;
+    });
   }
   
 }

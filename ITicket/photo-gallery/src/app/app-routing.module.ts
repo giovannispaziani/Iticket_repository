@@ -69,7 +69,11 @@ const routes: Routes = [
   {
     path: 'acquisto-confermato',
     loadChildren: () => import('./acquisto-confermato/acquisto-confermato.module').then( m => m.AcquistoConfermatoPageModule)
+  },  {
+    path: 'vendita-confermata',
+    loadChildren: () => import('./vendita-confermata/vendita-confermata.module').then( m => m.VenditaConfermataPageModule)
   },
+
 
 
 

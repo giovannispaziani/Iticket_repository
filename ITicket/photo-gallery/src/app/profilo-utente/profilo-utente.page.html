@@ -5,15 +5,15 @@
 </ion-header>
 
 <ion-content>
-  <ion-card>
+  <ion-card [routerLink]="['/tabs/impostazioni']">
     <ion-img class="impostazioni" src="../../assets/images/setting.png"></ion-img>
   </ion-card>
 
   <ion-card class="ncard">
     <ion-img class="profilo" src="../../assets/images/man.png"></ion-img>
-      <p class="nome"> GIORGIO</p>
-      <p class="cognome"> INNAMORATI</p>
-      <p class="email"> ginnamorati78@gmail.com  </p>
+      <p class="nome"> {{utente.nome}}</p>
+      <p class="cognome"> {{utente.cognome}}</p>
+      <p class="email"> {{utente.email}}  </p>
   </ion-card>
 
   <ion-card class="impo" [routerLink]="['/tabs/carrello']">

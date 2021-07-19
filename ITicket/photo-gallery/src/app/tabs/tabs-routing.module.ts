@@ -84,7 +84,17 @@ const routes: Routes = [
       loadChildren: () => import('../cambio-nominativo-biglietto/cambio-nominativo-biglietto.module').then(m => m.CambioNominativoBigliettoPageModule),
       canActivateChild: [AuthGuard]  
     },
-
+    {
+      path: 'vendita-confermata',
+      loadChildren: () => import('../vendita-confermata/vendita-confermata.module').then(m => m.VenditaConfermataPageModule),
+      canActivateChild: [AuthGuard]  
+    },
+    {
+      path: 'impostazioni',
+      loadChildren: () => import('../impostazioni/impostazioni.module').then(m => m.ImpostazioniPageModule),
+      canActivateChild: [AuthGuard]  
+    },
+    
       {
         path: '',
         redirectTo: '/tabs/tab1',

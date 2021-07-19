@@ -41,4 +41,18 @@ export class EventoService {
             }));
     } 
 
+    create(nuovoEvento: Evento): Observable<Evento> {
+        console.log("Avvio createEvento");
+        return this.http.post<Evento>(URL.EVENTOCREATE, nuovoEvento, {observe: 'response'}).pipe(
+           map((resp: HttpResponse<Evento>) => {
+            console.log("dentro map");
+                // Aggiornamento dell'utente nello storage.
+                // Utente memorizzato nello storage per evitare chiamata REST quando si vuole modificare il profilo
+                // e se l'utente chiude la app e la riapre i dati sono gia' presenti
+                // update dell'observable dell'utente
+                this.evento$.next(resp.body);
+                return resp.body;
+            }));
+    } 
+
 }

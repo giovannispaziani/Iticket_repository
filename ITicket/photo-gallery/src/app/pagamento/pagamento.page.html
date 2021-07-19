@@ -1,10 +1,61 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>pagamento</ion-title>
+    <ion-title>Profilo</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-button [routerLink]="['/tabs/acquisto-confermato']" expand="block"> <p class="style2"> Effettua pagamento </p> </ion-button>
+  <ion-card class="ncard">
+    <ion-img class="profilo" src="../../assets/images/bb.svg"></ion-img>
+      <p class="nome">  PAGAMENTO</p>
+      <p class="cognome"> BIGLIETTO</p>
+      <p class="email"> Account:</p>
+      <p class="email2"> {{utente.email}}</p>
+  </ion-card>
+
+
+
+  <ion-card class="impo">
+    <ion-item>
+      <ion-label position="stacked">NUMERO CARTA</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+</ion-card>
+
+<ion-card class="impo">
+  <ion-item>
+    <ion-label position="floating">SCADENZA</ion-label>
+    <ion-datetime displayFormat="MM/DD/YYYY" min="2020-03-14" max="2028-12-09"></ion-datetime>
+  </ion-item>
+</ion-card>
+
+
+<ion-card class="ncard">
+  <ion-img class="carte" src="../../assets/images/dd.png"></ion-img>
+</ion-card>
+
+
+  <ion-card class="impo" [routerLink]="['/tabs/acquisto-confermato']">
+    <p class="desc"> COMPRA</p>
+    <ion-img class="carrello" src="../../assets/images/sell.png"></ion-img>
+  </ion-card>
+
+  
 
 </ion-content>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

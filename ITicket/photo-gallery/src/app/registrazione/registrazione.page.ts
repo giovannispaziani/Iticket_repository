@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 //import {Lingua, LinguaService} from '../../services/lingua.service';
 import {UtenteService} from '../services/utente.service';
 import {BehaviorSubject} from 'rxjs';
@@ -29,13 +29,14 @@ export class RegistrazionePage implements OnInit {
   ngOnInit() {
     //this.lingue = this.linguaService.getLingue();
     this.profiloFormModel = this.formBuilder.group({
-      email: ['', Validators.compose([
-        Validators.required
-      ])],
-      telefono: [''],
-      linguaPreferita: ['', Validators.compose([
-        Validators.required
-      ])]
+      nome: new FormControl('',  { validators : [Validators.required] }),
+      cognome: new FormControl('',  { validators : [Validators.required] }),
+      email: new FormControl('',  { validators : [Validators.required] }),
+      indirizzoSpedizione: new FormControl('',  { validators : [Validators.required] }),
+      indirizzoFatturazione: new FormControl('',  { validators : [Validators.required] }),
+      telefono: new FormControl('',  { validators : [Validators.required] }),
+      password: new FormControl('',  { validators : [Validators.required] }),
+      confermaPassword: new FormControl('',  { validators : [Validators.required] }),
     });
 
     //this.linguaService.getLinguaAttuale().subscribe((lingua) => {
@@ -52,14 +53,16 @@ export class RegistrazionePage implements OnInit {
     //this.linguaService.updateLingua(this.profiloFormModel.value.linguaPreferita);
     this.utente$.subscribe((utente) => {
       this.utente = utente;
-      this.utente.email = "babbo2";
-      this.utente.telefono = this.profiloFormModel.value.telefono;
-      this.utente.cognome = "Giggio2";
+      this.utente.email = this.profiloFormModel.value.email;
+      this.utente.telefono =  this.profiloFormModel.value.telefono;
+      this.utente.cognome = this.profiloFormModel.value.cognome;
       this.utente.matricola = "212131";
-      this.utente.nome = "Alfredo2";
-      this.utente.password = "babbo2";
+      this.utente.nome = this.profiloFormModel.value.nome;
+      this.utente.password = this.profiloFormModel.value.password;
       this.utente.ruolo ="Spazzino2";
-      this.utente.username ="Gabriele2";
+      this.utente.username =this.profiloFormModel.value.email;
+      this.utente.indirizzoSpedizione =  this.profiloFormModel.value.indirizzoSpedizione;
+      this.utente.indirizzoFatturazione = this.profiloFormModel.value.indirizzoFatturazione;
     });
     
     console.log("Stampo la password dell'utente creato : " + this.utente.password);

@@ -8,7 +8,6 @@ import {Evento} from '../model/evento.model';
 import {Utente} from '../model/utente.model';
 import {Observable, BehaviorSubject} from 'rxjs';
 import {map} from 'rxjs/operators';
-import { Console } from 'console';
 
 
 
