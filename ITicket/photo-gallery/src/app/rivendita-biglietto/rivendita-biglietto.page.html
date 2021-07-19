@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Profilo</ion-title>
+    <ion-title>Rivendita biglietto</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -20,7 +20,7 @@
 
   <ion-card class="impo">
     <ion-item>
-      <ion-label>Evento</ion-label>
+      <ion-label>Biglietto/i</ion-label>
       <ion-select [(ngModel)]="selectedOptions" multiple="true" cancelText="Annulla" okText="Seleziona" (ionChange)="printVal()">
         <ion-select-option *ngFor="let option of options; let i = index" [(value)]="option">{{nomiEventi[i]}}</ion-select-option>
       </ion-select>

@@ -39,8 +39,7 @@
       <ion-text color="danger">{{ 'CODICE FISCALE_REQUIRED' }}</ion-text>
     </p>
     <div margin-top="20px">
-      <ion-button class="buttonCambiaNominativo" icon-left size="medium" expand="full" shape="round" color="primary" (click)="cabiaNominativo()" [disabled]="!cambioNominativoFormModel.valid" tappable>
-        <ion-icon name="log-in"></ion-icon>
+      <ion-button class="buttonCambiaNominativo" [routerLink]="['/tabs/conferma-cambio-nominativo']" icon-left size="medium" expand="full" shape="round" color="primary" (click)="cabiaNominativo()" [disabled]="!cambioNominativoFormModel.valid" tappable>
         {{ 'CAMBIA NOMINATIVO' }}
       </ion-button>
     </div>

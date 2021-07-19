@@ -73,6 +73,10 @@ const routes: Routes = [
     path: 'vendita-confermata',
     loadChildren: () => import('./vendita-confermata/vendita-confermata.module').then( m => m.VenditaConfermataPageModule)
   },
+  {
+    path: 'conferma-cambio-nominativo',
+    loadChildren: () => import('./conferma-cambio-nominativo/conferma-cambio-nominativo.module').then( m => m.ConfermaCambioNominativoPageModule)
+  },
 
 
 

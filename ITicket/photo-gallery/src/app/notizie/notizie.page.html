@@ -19,32 +19,9 @@
 
 <ion-header>
   <ion-toolbar>
-    <ion-title class="titolo">
+    <ion-title >
       Notizie
     </ion-title>
-    <ion-buttons slot="start">
-
-      <ion-button disabled="true">
-
-        <ion-icon name="add-outline" size="large" slot="icon-only" style="color: rgba(42, 56, 211, 0);"></ion-icon>
-
-        </ion-button> 
-
-      </ion-buttons>
-
-    
-
-      <ion-buttons slot="end">
-
-      <ion-button disabled="true">
-
-        <ion-icon name="add-outline" size="large" slot="icon-only" style="color: rgba(42, 56, 211, 0);"></ion-icon>
-
-      </ion-button>      <!-- Inutile, solo per centrare l'ion-title "Recensioni" -->
-
-      </ion-buttons>
-
-
   </ion-toolbar>
 </ion-header>
 
@@ -55,10 +32,10 @@
   
   <!-- notizie messe dentro ion list e dentro ion item *ngFor -->
   
-    <ion-card class="ncard" *ngFor="let notizia of notizie$ | async" [routerLink]="['/notizie', notizia.id]" routerDirection="forward" detail="true">
+    <ion-card class="ncard" *ngFor="let notizia of notizie$ | async" >
       <p class="titolo"> {{notizia.nome}}  </p>
       <p class="data"> {{notizia.dataPubblicazione | date:'dd/MM/yyyy'}}  </p>
-      <p class="descrizione"> Giggino a lavoro nonci crede neanche lui. Giggino a lavoro nonci crede neanche lui.Giggino a lavoro nonci crede neanche lui.</p>
+      <p class="descrizione"> {{notizia.descrizione}}</p>
     </ion-card>
 </ion-content>
 
